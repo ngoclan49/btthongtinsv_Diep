@@ -32,7 +32,7 @@ export default class ReactForm extends Component {
         hoten: "Nguyễn Văn B",
         email: "nguyenvanb@gmail.com",
       },
-    ],
+    ]
   };
 
   handleUpdateSinhVien = () => {
@@ -145,6 +145,7 @@ export default class ReactForm extends Component {
 
   render() {
     let {formValue} = this.state
+    
     return (
       <>
         <form className="container mt-5" onSubmit={this.handleSubmit}>
@@ -225,7 +226,7 @@ export default class ReactForm extends Component {
                   <br />
                 </div>
 
-                <div className="card-footer bg-white">
+                <div className="card-footer bg-white d-flex">
                   <button
                     type="submit"
                     className="btn btn-success mt-2"
@@ -241,7 +242,14 @@ export default class ReactForm extends Component {
                     disabled={!this.state.valid}
                   >
                     Cập nhật
-                  </button>
+                  </button>&nbsp;
+                  <div className="search">
+                    <input 
+                      type="text" 
+                      className="form-control" placeholder="Tìm kiếm ..." 
+                    />
+                    <button className="btn btn-warning btn-search">Search</button>
+                  </div>
                 </div>
               </div>
             </div>
